@@ -26,7 +26,8 @@
 
   &-wrapper {
     width: 100%;
-    height: 68px;
+    height: 28px;
+    padding: 20px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,24 +35,56 @@
     color: $text-primary;
     border-radius: 12px;
 
+    &-firstItem {
+      width: 286px;
+
+      .selectComponent-wrapper-value-text {
+        width: auto;
+        align-items: flex-start;
+        margin-left: 24px;
+        text-align: left;
+      }
+    }
+
+    &-secondItem {
+      border-left: 2px solid $bg-global-normal;
+      width: 200px;
+      height: 100%;
+    }
+
+
     &-value {
-      width: 258px;
-      margin-left: 24px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
 
+
       &-text {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
+        margin-right: 30px;
 
         &-main {
           font-style: normal;
           font-weight: 800;
           font-size: 16px;
           line-height: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          gap: 3px;
+
+          &-title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 12px;
+          }
         }
 
         &-additional {
@@ -75,28 +108,37 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 18px;
       }
     }
 
     &-select {
-      margin-right: 12px;
-      padding: 0px 10px;
+      // margin: 18px 0 18px 24px;
+      margin-left: 24px;
       height: 32px;
-      border-left: 2px solid $bg-global-normal;
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       gap: 14px;
 
       &-image {
+        align-items: center;
+        justify-content: flex-start;
         width: 32px;
         height: 32px;
+
+        & svg {
+          min-width: 32px;
+          min-height: 32px;
+        }
       }
 
       &-item {
         display: block;
         cursor: pointer;
-        width: 68px;
+        width: 120px;
+        margin-right: 41px;
+        margin-left: 13px;
         color: $text-primary;
         background-color: $bg-light-gray;
         border: none;

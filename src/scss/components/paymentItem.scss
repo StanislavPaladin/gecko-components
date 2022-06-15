@@ -2,15 +2,15 @@
 
 .paymentItem {
   width: 100%;
-  min-height: 50px;
+  min-height: 83px;
   box-sizing: border-box;
   height: 83px;
   display: flex;
-  background-color: $bg-light-gray;
+  background-color: $bg-additional;
   color: $text-primary;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid $btn-secondary;
+  border: 1px solid #232442;
   border-radius: 12px;
   cursor: pointer;
 

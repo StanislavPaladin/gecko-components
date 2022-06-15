@@ -7,12 +7,15 @@
   line-height: 16px;
   color: $text-primary;
   min-width: $minWidth;
+  width: 100%;
+  min-height: 64px;
   padding: $padding;
   background: linear-gradient(180deg, rgba(8, 199, 146, 0) 0%, #126E82 100%), linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
   border-radius: 99px;
   border: 0px;
   cursor: pointer;
   white-space: no-wrap;
+  margin: 0;
 }
 
 @mixin primary-btn-small {
@@ -175,7 +178,7 @@
   padding: 10px 20px;
   font-weight: 700;
   font-size: 16px;
-  line-height: 16px;
+  line-height: 22px;
   letter-spacing: -0.01em;
   color: #4cd06e;
   background: #3d4459;

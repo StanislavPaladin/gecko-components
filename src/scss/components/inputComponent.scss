@@ -17,6 +17,10 @@
       font-weight: 400;
       font-size: 12px;
       line-height: 25px;
+
+      &-colored:nth-child(0) {
+        color: red;
+      }
     }
   }
 
@@ -28,6 +32,7 @@
     padding: 16px 24px;
     border-radius: 12px;
     background-color: $bg-light-gray;
+
     @media screen and (max-width: 646px) {
       height: 54px;
       padding: 0 12px;
@@ -44,11 +49,13 @@
       font-weight: 400;
       font-size: 16px;
       line-height: 16px;
+
       &::placeholder {
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
-        color: #55657E;
+        color: #fff;
+        opacity: .3;
       }
 
       @media screen and (max-width: 646px) {
