@@ -59,7 +59,8 @@
   }
 
   &-text {
-    color: $bg-global-normal;
+    color: #8697A2;
+    opacity: .6;
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -90,13 +91,13 @@
 
 /* Checked */
 .item-left input[type="radio"]:checked + label {
-  background: $color-blue;
+  background: #fff;
 }
 
 .item-right input[type="radio"]:checked + label {
-  background: $color-blue;
+  background: #57B575;
 }
 
 .inactive {
-  background-color: $bg-light-gray;
+  background: rgba(87, 181, 117, 0.1);
 }

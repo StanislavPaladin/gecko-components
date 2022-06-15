@@ -141,7 +141,7 @@ const ChatModal = () => {
 						/>
 						<PrivacyItem
 							title={"Refuse tip from strangers"}
-							isActive={false}
+							isActive={true}
 						/>
 					</div>
 				)}

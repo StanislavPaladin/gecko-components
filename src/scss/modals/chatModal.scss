@@ -227,6 +227,7 @@
             align-items: center;
             height: 100%;
             width: 320px;
+
             img {
               object-fit: contain;
             }
@@ -296,6 +297,7 @@
           }
         }
       }
+
       &-btn.active {
         p {
           padding-left: 0;
@@ -306,8 +308,8 @@
 
   &-privacy {
     width: 543px;
-    background: $bg-global-dark;
-    border-radius: 0px 16px 16px 16px;
+    background: #232442;
+    border-radius: 16px;
     padding: 30px 34px;
 
     &-btn {
@@ -315,12 +317,20 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      font-style: normal;
       font-weight: 700;
-      font-size: 14px;
-      line-height: 14px;
+      font-size: 16px;
+      line-height: 22px;
       color: $text-primary;
       margin-bottom: 24px;
       cursor: pointer;
+      & svg {
+        width: 10px;
+        height: 10px;
+        path{
+          stroke: #8697A2;
+        }
+      } 
     }
 
     &-btn:hover {
@@ -381,6 +391,7 @@
   border-radius: 99px;
 }
 
-.search-btn:hover, .search-btn:active{
+.search-btn:hover,
+.search-btn:active {
   background: linear-gradient(163.03deg, #61F28B 22.74%, #67A86A 77.63%) !important;
 }
