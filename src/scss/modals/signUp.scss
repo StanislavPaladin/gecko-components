@@ -1,0 +1,381 @@
+@import "../variables.scss";
+
+.signUp {
+  width: 543px;
+  height: 903px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  position: absolute;
+  top: 10%;
+  left: calc((100% - 543px)/2);
+  //transform: translate(-50%, -40%);
+
+  @media screen and (max-width: 646px) {
+    width: 358px;
+    left: calc((100% - 358px)/2);
+    height: fit-content;
+    top:10%;
+  }
+
+  &-header {
+    background: url("../../assets/form-header.svg") center center no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 148px;
+    position: relative;
+    @media screen and (max-width: 646px) {
+      background-position: 0px 50px;
+    }
+
+    &-close {
+      position: absolute;
+      right: 0;
+      top: -40px;
+      cursor: pointer;
+      width: 36px;
+      width: 26px;
+
+      @media screen and (max-width: 646px) {
+        top: 20px;
+        width: 26px;
+        width: 26px;
+      }
+
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-coin {
+      width: 192px;
+      height: 143px;
+
+      position: absolute;
+      top: -50px;
+      margin-left: 140px;
+
+      @media screen and (max-width: 646px) {
+        margin-left: 60px;
+        top: -10px;
+        width: 126;
+        height: 94px;
+      }
+
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    &-btn {
+      position: absolute;
+      bottom: -74px;
+      width: 54px;
+      height: 56px;
+      position: relative;
+      background: $bg-global-dark;
+      border-radius: 12px 0px 0px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & svg {
+        width: 24px;
+        height: 17px;
+      }
+
+      & path {
+        fill: $color-blue;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 100;
+        width: 57px;
+        height: 56px;
+        background-image: url("../../assets/icons/form_figure.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        right: -56px;
+        top: 0px;
+      }
+    }
+  }
+
+  &-form {
+    height: fit-content;
+    width: 100%;
+    background: $bg-global-dark;
+    color: $text-primary;
+    border-radius: 0px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0 40px 0;
+
+    &-wrapper {
+      position: absolute;
+      top: 130px;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: calc(100vh - 10vh - 160px);
+      width: 100%;
+
+      &::-webkit-scrollbar { width: 0; }
+
+      & { -ms-overflow-style: none; }
+
+      & { overflow: -moz-scrollbars-none; }
+
+    }
+
+    &-title {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 30px;
+
+      @media screen and (max-width: 646px) {
+        margin-bottom: 12px;
+        font-size: 26px;
+        line-height: 26px;
+      }
+    }
+
+    &-inputs {
+      width: 462px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid rgba(85, 101, 126, 0.2);
+
+      @media screen and (max-width: 646px) {
+        margin-bottom: 22px;
+        gap: 0px;
+      }
+
+      &-referal {
+        width: 248px;
+        cursor: pointer;
+        background-color: inherit;
+        color: $text-secondary;
+        border: none;
+        border-bottom: 1px solid $text-secondary;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        background-image: url("../../assets/icons/arrowDown.svg");
+        background-repeat: no-repeat, repeat;
+        background-position: right;
+        margin-bottom: 24px;
+      }
+
+      &-referal:focus {
+        outline: none;
+      }
+
+      @media screen and (max-width: 646px) {
+        width: 90%;
+        margin-bottom: 22px;
+      }
+    }
+
+    &-agree {
+      width: 459px;
+      margin-bottom: 45px;
+
+      @media screen and (max-width: 646px) {
+        width: 90%;
+        margin-bottom: 55px;
+      }
+
+      &-checkbox {
+        display: none;
+      }
+
+      &-label {
+        width: 459px;
+        display: flex;
+      }
+
+      &-pseudocheckbox {
+        width: 459px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 11px;
+        line-height: 11px;
+        color: $text-secondary;
+
+        @media screen and (max-width: 646px) {
+          width: 60%;
+        }
+      }
+
+      &-pseudocheckbox::before {
+        cursor: pointer;
+        content: "\00A0";
+        display: inline-block;
+        box-sizing: border-box;
+        width: 24px;
+        height: 24px;
+        border: 2px solid #4cd06e;
+        border-radius: 4px;
+        vertical-align: baseline;
+        background-color: transparent;
+        margin-right: 8px;
+        @media screen and (max-width: 646px) {
+          height: 20px;
+          width: 27px;
+        }
+      }
+
+      &-checkbox:checked + .signUp-form-agree-pseudocheckbox::before {
+        padding: 3px 6px;
+        content: url("../../assets/icons/checkbox-green.svg");
+        border: 2px solid #4cd06e;
+        border-radius: 4px;
+        background-color: transparent;
+        @media screen and (max-width: 646px) {
+          padding: 3px 3px;
+          width: 22px;
+        }
+      }
+    }
+
+    &-btns {
+      position: relative;
+      width: 462px;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+
+      &-bonus {
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        top: -40px;
+        left: 130px;
+        width: 141px;
+        height: 30px;
+        background-color: $color-pink;
+        color: $text-primary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 10px;
+        border-radius: 55px;
+        @media screen and (max-width: 646px) {
+          left: 0;
+        }
+      }
+
+      @media screen and (max-width: 646px) {
+        width: 90%;
+        height: 122px;
+        flex-direction: column-reverse;
+        gap: 12px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 26px;
+      }
+
+      &-primary {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 332px;
+        background-color: $color-blue;
+        border-radius: 99px;
+        cursor: pointer;
+
+        @media screen and (max-width: 646px) {
+          // height: 100%;
+          height: 50px;
+          width: 100%;
+        }
+      }
+
+      &-secondary {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        background-color: $bg-light-gray;
+        border-radius: 99px;
+        cursor: pointer;
+
+        @media screen and (max-width: 646px) {
+          width: 100%;
+          height: 55px;
+        }
+      }
+    }
+
+    &-tools {
+      &-title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 25px;
+        text-align: center;
+        margin-bottom: 16px;
+
+        @media screen and (max-width: 646px) {
+          font-size: 12px;
+          line-height: 25px;
+          margin-bottom: 8px;
+        }
+      }
+
+      &-wrapper {
+        width: 240px;
+        height: 52px;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg-light-gray;
+        border-radius: 50px;
+
+        &-item {
+          cursor: pointer;
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+.pink-square {
+  z-index: 0;
+  top: -28px;
+  left: 140px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: $color-pink;
+  transform: rotate(-45deg);
+  @media screen and (max-width: 646px) {
+    left: 10px;
+  }
+}

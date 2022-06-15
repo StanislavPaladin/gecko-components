@@ -1,0 +1,324 @@
+@import "../../variables";
+
+.lottery {
+  position: relative;
+  overflow: hidden;
+
+  .buttonsNavigation {
+    margin-bottom: 12px;
+
+    .textWithImage {
+      .text {
+        color: #232442;
+      }
+    }
+  }
+
+  &-tickets {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(269.84deg, #232442 17.94%, #443F91 95.88%);
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 80px;
+
+    .tickets {
+      display: flex;
+      gap: 12px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      color: $text-primary;
+      margin-right: 54px;
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: 536px) {
+      flex-direction: column;
+      gap: 14px;
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &-h2 {
+    font-style: normal;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 28px;
+    color: #0F161F;
+    text-align: center;
+  }
+
+  &-tips {
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+    gap: 2%;
+    margin-bottom: 80px;
+
+    .tip {
+      width: 32%;
+      height: 140px;
+      box-sizing: border-box;
+      padding: 35px 30px;
+      background: url("../../../assets/ticketsbg.png"),
+        linear-gradient(90deg, #4cd06e -42.83%, rgba(25, 140, 255, 0.08) 86.36%),
+        $bg-primary;
+      border-radius: 24px;
+      color: $text-primary;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        width: 210px;
+        margin: 0 auto;
+      }
+    }
+
+    @media screen and (max-width: 787px) {
+      flex-direction: column;
+      gap: 30px;
+
+      .tip {
+        width: 100%;
+
+        p {
+          width: 180px;
+        }
+      }
+    }
+  }
+
+  &-rule-wrap {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 36px;
+    margin-bottom: 65px;
+  }
+
+  &-cocoTable {
+    position: relative;
+    z-index: 100;
+    margin-top: 18px;
+
+    &-headings {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 40px;
+      border-bottom: 1px solid #232442;
+
+      .heading {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        color: #232442;
+        width: 95px;
+      }
+    }
+
+    @media screen and (max-width: 787px) {
+      width: 800px;
+    }
+  }
+
+  &-cocoTable-wrap {
+    position: relative;
+    z-index: 100;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &-instructions {
+    position: relative;
+    z-index: 100;
+    margin-top: 80px;
+
+    h3 {
+      color: #575C62;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      margin-top: 36px;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        margin-top: 20px;
+        color: #3d4459;
+      }
+    }
+
+    &-btn {
+      margin-top: 48px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      color: #383465;
+      background: rgba(56, 52, 101, 0.12);
+      border-radius: 50px;
+      outline: none;
+      border: 0;
+      padding: 15px 26px;
+
+      cursor: pointer;
+
+      svg {
+        margin-left: 10px;
+
+        path {
+          stroke: #383465;
+        }
+      }
+    }
+  }
+
+  &-about {
+    position: relative;
+    z-index: 100;
+    margin-bottom: 100px;
+    background-image: url("../../../assets/banners/about.png");
+    background-color:#232442;
+    background-repeat: no-repeat;
+    background-position: 30% bottom;
+    background-size:40%;
+border-radius: 16px;
+    padding: 34px 40px;
+    position: relative;
+    display: flex;
+    gap: 10%;
+
+    .col {
+      width: 45%;
+
+      h3 {
+        font-weight: 700;
+font-size: 21px;
+line-height: 28px;
+        color: $text-primary;
+      }
+
+      p {
+        font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 24px;
+color: #F3F1E7;
+margin-top: 8px;
+span {
+  font-weight: 700;
+}
+      }
+
+      .details {
+        position: absolute;
+        bottom: 34px;
+        color: #FF4F0F;
+
+        svg {
+          margin-left: 10px;
+
+          path {
+            stroke: #FF4F0F;
+          }
+        }
+      }
+
+      .buttons-wrap {
+        background: rgba(255, 255, 255, 0.9);
+border-radius: 24px;
+        width: 100%;
+        padding: 36px;
+        box-sizing: border-box;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        p {
+          font-weight: 700;
+font-size: 16px;
+line-height: 28px;
+color: #232442;
+text-align: center;
+        }
+
+        .about-btn {
+          border-radius: 24px;
+        }
+
+        .about-btn.first {
+          background: #232442;
+          color:rgba(255,255,255,.5);
+          text-align: left;
+          padding-left: 16px;
+        }
+
+        .btn-wrap {
+          display: flex;
+          gap: 8px;
+          margin-top: 8px;
+          .about-btn {
+            width: 50%;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 787px) {
+      flex-direction: column;
+      gap: 30px;
+      padding: 18px;
+
+      .col {
+        width: 100%;
+
+        .details {
+          position: relative;
+          top: 0px;
+          margin-top: 20px;
+        }
+
+        .buttons-wrap {
+          padding: 28px;
+        }
+      }
+    }
+  }
+}

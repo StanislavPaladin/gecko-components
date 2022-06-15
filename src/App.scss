@@ -1,0 +1,66 @@
+@import "./scss/common";
+
+.App {
+  background-color: #CFD1EA;
+  background-image: url("./assets/mainBg.png");
+  display: flex;
+  position: relative;
+
+  .content {
+    width: calc(100% - 240px);
+    box-sizing: border-box;
+    transition: 0.1s ease;
+
+    &-inner {
+      margin-top: 72px;
+      display: flex;
+      
+      @media screen and (max-width: 647px) {
+        margin-top: 0px;
+      }
+      .page {
+        overflow: hidden;
+        width: calc(100% - 300px);
+        transition: 0.1s ease;
+
+        .modal-wrap {
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          z-index: 500;
+          top:0px;
+          left:0px;
+        }
+
+        @media screen and (max-width: 1365px) {
+          width: 100%;
+        }
+      }
+
+      .page.full {
+        width: 100%;
+      }
+
+      @media screen and (max-width: 870px) {
+        display: flex;
+      }
+    }
+
+    @media screen and(max-width: 1024px) {
+      width: 100%;
+    }
+  }
+  .content.chatHidden {
+    .page {
+      width: calc(100%);
+    }
+  }
+  .content.full {
+    width: 100%;
+  }
+  @media screen and (min-width: 1023px) {
+    .content.sidebarHidden {
+      width: calc(100% - 72px);
+    }
+  }
+}

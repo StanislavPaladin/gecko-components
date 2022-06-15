@@ -1,0 +1,241 @@
+@import "../scss/variables";
+
+.chat {
+  position: fixed;
+  right: 0px;
+  top: 72px;
+  width: 320px;
+  height: calc(100vh - 72px);
+  background: #333261;
+  border-radius: 25px 0px 0px 25px;
+  transition: 0.1s ease;
+  z-index: 100;
+
+  &-arrow {
+    display: none;
+  }
+
+  &-language {
+    display: flex;
+    padding: 0px 24px;
+    background-color: $bg-primary;
+    height: 40px;
+    border-radius: 25px 0px 0px;
+
+    align-items: center;
+    cursor: pointer;
+
+    &-online {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 37px;
+      color: #5C6290;
+      margin-left: 50px;
+      margin-right: auto;
+    }
+
+    .language {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: #8e8aa7;
+    }
+  }
+
+  &-options {
+    position: absolute;
+    z-index: 200;
+    margin-top: 5px;
+    left: 20px;
+    width: 60%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #0f121d;
+
+    .option {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: $text-primary;
+      align-items: center;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: 0.1s ease;
+    }
+
+    .option:hover {
+      background-color: #262B3D;
+      border-radius: 10px;
+    }
+  }
+
+  &-options.hidden {
+    pointer-events: none;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  &-messages {
+    background: #232442;
+    padding: 0px 24px;
+    overflow: auto;
+  }
+
+  &-input {
+    position: relative;
+    max-width: 100%;
+    padding: 14px;
+
+    &-block {
+      display: flex;
+      width: 100%;
+      height: 40px;
+      max-height: 182px;
+      position: relative;
+      box-sizing: border-box;
+
+      &-btn {
+        align-self: center;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #484780;
+        border-radius: 25px;
+        background: transparent;
+        font-weight: 700;
+        color: #4E7CFF;
+        font-size: 8px;
+        margin-right: 4px;
+      }
+
+      .input {
+        max-height: 100%;
+        overflow: auto;
+        resize: none;
+        background: transparent;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        flex-grow: 1;
+        padding: 10px;
+        box-sizing: border-box;
+        padding-right: 0;
+        padding-left: 13px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #fff;
+      }
+
+      .btn {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(180deg, rgba(8, 199, 146, 0) 0%, #126E82 100%), linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
+        border-radius: 5px;
+        align-self: flex-end;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+
+  &-input:before {
+    content: "";
+    position: absolute;
+    top: -75px;
+    left: 0px;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(23, 26, 43, 0) 0%, #171a2b 100%);
+  }
+
+  &-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+
+    &-online {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      color: $text-primary;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+
+      .online {
+        width: 10px;
+        height: 10px;
+        margin-right: 5px;
+
+        path {
+          stroke: $text-primary;
+          fill: transparent;
+        }
+      }
+    }
+  }
+}
+
+.chat.hidden {
+  width: 0;
+  right: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@media screen and (max-width: 1365px) {
+  .chat {
+    width: 0px;
+    opacity: 0;
+    top: 0;
+    position: fixed;
+    right: 0;
+    z-index: -2;
+    transition: 0.1s ease;
+  }
+
+  .chat.active {
+    width: 280px;
+    box-sizing: border-box;
+    opacity: 1;
+    z-index: 125;
+    height: 100%;
+    right: 0;
+
+    .chat-messages {
+      max-height: 80vh;
+    }
+
+    .chat-arrow {
+      position: absolute;
+      top: 16px;
+      left: -16px;
+      border-radius: 60px;
+      z-index: 200;
+      width: 32px;
+      height: 32px;
+      z-index: 200;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f121d;
+      cursor: pointer;
+
+      svg {
+        margin-left: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../variables";
+
+.wrap {
+  position: relative;
+  z-index: 100;
+
+  .affiliateBanner {
+    display: flex;
+    box-sizing: border-box;
+    background: url("../../../assets/banners/affiliate.png") no-repeat, linear-gradient(265.07deg, rgba(255, 230, 0, 0.58) -18.79%, #5C33CF 94.72%);
+    background-size: contain;
+    background-position: right center;
+    border-radius: 16px;
+    height: 317px;
+
+    &-content {
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 44px 40px;
+
+      .primary-btn {
+        position: absolute;
+        bottom: 10%;
+        text-align: center;
+        background: linear-gradient(148.64deg, #FFFFFF -1.63%, rgba(224, 224, 224, 0.54) 100%);
+        box-shadow: 0px 4px 70px #202151;
+        border-radius: 60px;
+        color: #0F161F;
+        padding: 16px;
+      }
+
+      p {
+        margin: 10px 0px;
+        width: 300px;
+
+        font-size: 16px;
+        line-height: 22px;
+        opacity: 0.5;
+        color: $text-primary;
+        margin-bottom: 20px;
+
+        @media screen and (max-width: 1600px) {
+          width: 184px;
+        }
+      }
+
+      h2 {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 49px;
+        color: #CFD1EA;
+      }
+    }
+
+    .hero {
+      position: absolute;
+      height:392px;
+      right:15%;
+      bottom: 0px;
+      z-index: 100;
+    }
+
+    @media screen and (max-width: 860px) {
+      &-content {
+        margin: 0 auto;
+      }
+    }
+  }
+}

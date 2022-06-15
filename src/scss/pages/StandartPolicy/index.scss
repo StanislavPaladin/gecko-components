@@ -1,0 +1,125 @@
+@import "../../variables";
+
+.standartPolicy {
+  position: relative;
+  margin-top: 24px;
+  margin-bottom: 120px;
+
+  &-head {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    gap: 8px;
+
+    &-btn {
+      width: fit-content;
+      background: #48437E !important;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.1s ease;
+
+      &:hover {
+        background: linear-gradient(222.21deg, #52F28F 1.72%, #FFE65B 168.65%) !important;
+        color: #232442 !important;
+      }
+    }
+
+    &-btn.active {
+      background: linear-gradient(222.21deg, #52F28F 1.72%, #FFE65B 168.65%) !important;
+      color: #232442 !important;
+    }
+  }
+
+  &-content {
+    padding: 18px 26px;
+
+    background: #FFFFFF;
+    border-radius: 16px;
+
+    &-h2,
+    &-h3 {
+      font-weight: 700;
+      font-size: 15px;
+      color: #232442;
+      padding: 14px 0px;
+    }
+
+    &-p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 19px;
+      letter-spacing: 0.01em;
+      color: #575C62;
+      padding: 8px 0px;
+    }
+    &-t {
+      font-weight: 700;
+      font-size: 15px;
+      padding: 6px;
+      padding-left: 0;
+      line-height: 24px;
+      color: #232442;
+    }
+
+    &-h3 {
+      font-weight: 700;
+      padding-bottom: 8px;
+    }
+
+    &-table {
+      padding-bottom: 36px;
+
+      @media screen and (max-width: 787px) {
+        padding-bottom: 20px;
+      }
+
+      .head {
+        padding: 0px 45px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #232442;
+
+        @media screen and (max-width: 787px) {
+          margin-bottom: 10px;
+          padding: 0;
+        }
+      }
+
+      &-content {
+        width: 100%;
+
+        &-item {
+          width: 100%;
+          box-sizing: border-box;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 4px 45px;
+
+          @media screen and (max-width: 787px) {
+            margin-bottom: 10px;
+            padding: 4px 10px;
+          }
+
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            color: #232442;
+          }
+        }
+
+        &-item.active {
+          background: #383465;
+          border-radius: 8px;
+
+          p {
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}

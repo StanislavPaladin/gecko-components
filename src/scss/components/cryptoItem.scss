@@ -1,0 +1,19 @@
+@import "../_variables.scss";
+
+.cryptoItem {
+  display: flex;
+  align-items: center;
+  background: #F3F5F6;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 6px 8px;
+  padding-right: 16px;
+
+  .price {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8697A2;
+    margin-left: 4px;
+  }
+}

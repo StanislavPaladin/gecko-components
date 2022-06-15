@@ -1,0 +1,154 @@
+@import "../../variables";
+
+.lotteryBanner {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 40px;
+  margin: 30px 0px;
+  background-image: url("../../../assets/banners/lottery.png"), linear-gradient(180deg, rgba(35, 36, 66, 0.7) -22.16%, rgba(56, 52, 101, 0.85) 28.82%, #D77714 142.55%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  border-radius: 16px;
+
+  &-head {
+    display: flex;
+    gap: 80px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    color: #6f778d;
+
+    &-tickets {
+      color: #FFFFFF;
+
+      span {
+        color: #FF4F0F !important;
+      }
+    }
+
+    span {
+      color: $text-primary;
+    }
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+
+    .price {
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 81px;
+      letter-spacing: 0.01em;
+      color: #CFD1EA;
+      margin-top: 12px;
+    }
+
+    .text {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 27px;
+      letter-spacing: 0.05em;
+      color: rgba(255, 255, 255, 0.5);
+      margin-top: 8px;
+    }
+  }
+
+  .btn-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 26px;
+    gap: 34px;
+
+    &-btn {
+      background: linear-gradient(148.64deg, #FFFFFF -1.63%, rgba(224, 224, 224, 0.54) 100%);
+      box-shadow: 0px 4px 70px #202151;
+      border-radius: 60px;
+      padding: 17px 42px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      color: #0F161F;
+    }
+
+    .next-draw {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+
+  .btn-wrap.mobile {
+    display: none;
+  }
+
+  &-footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      color: $text-primary;
+    }
+
+    p:nth-child(2) {
+      color: #93acd3;
+    }
+  }
+
+  @media screen and (max-width: 787px) {
+    &-content {
+      .price {
+        font-size: 40px;
+      }
+
+      .text {
+        font-size: 21px;
+        margin: 0;
+      }
+
+      &-img {
+        width: 120px;
+      }
+    }
+
+    .btn-wrap {
+      display: none;
+    }
+
+    .btn-wrap.mobile {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  @media screen and (max-width: 556px) {
+    padding: 21px;
+    background-position: left;
+
+    &-content {
+      justify-content: space-between;
+      gap: 0px;
+
+      &-img {
+        width: 80px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../variables";
+
+.sportBannerWrap {
+  margin-top: 24px;
+  margin-bottom: 60px;
+  .mobile {
+    display: none;
+  }
+
+  @media screen and (max-width: 646px) {
+    .mobile {
+      display: block;
+    }
+    .sport-banners {
+      display: none;
+    }
+  }
+}

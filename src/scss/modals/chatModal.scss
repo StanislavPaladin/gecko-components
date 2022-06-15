@@ -1,0 +1,314 @@
+@import "../variables.scss";
+@import "../common.scss";
+
+.chatModal {
+  z-index: 500;
+  position: absolute;
+  height:100%;
+  padding-top: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &-close {
+    width: fit-content;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  &-body {
+    width: 768px;
+    max-height:85vh;
+    overflow: auto;
+    background: $bg-global-dark;
+    border-radius: 0px 16px 16px 16px;
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 27px 38px;
+
+      h3 {
+        font-weight: 700;
+        font-size: 16px;
+        color: $text-primary;
+        line-height: 16px;
+      }
+      .options {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 16px;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        svg {
+          path {
+            fill: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+    &-content {
+      overflow: auto;
+      max-height:100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      .search {
+        background: $bg-primary;
+        padding: 16px 0px;
+        padding-left: 38px;
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+        &-btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          width: 40px;
+          background-color: $btn-secondary;
+          border-radius: 5px;
+          @include blueBtnTransition();
+          cursor: pointer;
+          svg {
+            path {
+              stroke: $text-primary;
+            }
+          }
+        }
+        &-input {
+          width: 249px;
+          height: 40px;
+
+          background: #0f121d;
+          border-radius: 5px;
+          border: 0;
+          outline: none;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 13px;
+          color: #99b5e2;
+          padding-left: 18px;
+        }
+        @media screen and (max-width: 787px) {
+          padding-left: 0;
+          justify-content: center;
+        }
+      }
+      .chats-wrap {
+        display: flex;
+        height:570px;
+        overflow:auto;
+        .friends-list {
+          width: 320px;
+          background: $bg-primary;
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+          .friend-request {
+            margin-left: 38px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 14px 0px;
+            display: flex;
+            gap: 8px;
+            cursor: pointer;
+            .userPhoto {
+              width: 42px;
+              height: 42px;
+              border-radius: 90px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: #4cd06e;
+            }
+            .userText {
+              font-style: normal;
+              font-weight: 500;
+              font-size: 15px;
+              line-height: 15px;
+              .title {
+                color: rgba(255, 255, 255, 0.6);
+                margin-bottom: 8px;
+              }
+              .text {
+                color: #3d4459;
+              }
+            }
+          }
+          @media screen and (max-width: 787px) {
+            width: 100%;
+            border: none;
+            .friend-request {
+              margin: 0px 18px;
+            }
+          }
+        }
+        .chats-area {
+          width: 448px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          p {
+            color: #55657e;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 15px;
+          }
+          @media screen and (max-width: 787px) {
+            display: none;
+          }
+        }
+        .chats-list {
+          width: 320px;
+          background: $bg-primary;
+          border-right: 1px solid rgba(255, 255, 255, 0.1);
+          &-buttons {
+            display: flex;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            &-btn {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 50%;
+              padding: 14px 0px;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 16px;
+              color: rgba(255, 255, 255, 0.6);
+              cursor: pointer;
+              transition: 0.1s ease;
+            }
+            &-btn.active {
+              background: linear-gradient(
+                  180deg,
+                  rgba(25, 140, 255, 0) 0%,
+                  rgba(25, 140, 255, 0.32) 100%
+                ),
+                $bg-global-dark;
+              box-shadow: inset 0px -2px 0px #198cff;
+              color: $text-primary;
+            }
+            &-btn:hover {
+              color: $btn-secondary;
+            }
+          }
+          &-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            img {
+              object-fit: contain;
+            }
+          }
+          @media screen and (max-width: 787px) {
+            width: 100%;
+            border: none;
+          }
+        }
+      }
+    }
+    &-footer {
+      padding: 10px 0px;
+      padding-left: 38px;
+      background: $bg-global-dark;
+      border-radius: 0px 0px 16px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      &-btn {
+        padding: 8px 14px;
+        background: #0f121d;
+        border-radius: 90px;
+        cursor: pointer;
+        .wrap {
+          padding: 10px 20px;
+          border-radius: 90px;
+          display: flex;
+          gap: 8px;
+          align-items: center;
+          transition: 0.1s ease;
+          p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            color: rgba(255, 255, 255, 0.6);
+            transition: 0.1s ease;
+          }
+          svg {
+            transition: 0.1s ease;
+          }
+        }
+      }
+      &-btn.active,
+      &-btn:hover {
+        .wrap {
+          background: $bg-primary;
+          p {
+            color: $btn-secondary;
+          }
+          svg {
+            path {
+              fill: $btn-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-privacy {
+    width: 543px;
+    background: $bg-global-dark;
+    border-radius: 0px 16px 16px 16px;
+    padding: 30px 34px;
+    &-btn {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 14px;
+      color: $text-primary;
+      margin-bottom: 24px;
+      cursor: pointer;
+    }
+    &-btn:hover {
+      text-decoration: underline;
+    }
+    .privacyItem:nth-last-child(-n + 1) {
+      margin-bottom: 250px;
+    }
+    @media screen and (max-width: 787px) {
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+      &-body {
+        box-sizing: border-box;
+        width: 100%;
+      }
+      .privacyItem:nth-last-child(-n + 1) {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 787px) {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+    &-body,&-privacy {
+      box-sizing: border-box;
+      width: 100%;
+      max-height: 95%;
+      overflow: hidden auto;
+      &-footer {
+        padding-left: 0;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "../../variables";
+
+.openGameBanner {
+  max-width: 100%;
+  box-sizing: border-box;
+  background: $bg-primary;
+  border-radius: 16px;
+  padding: 20px;
+  &-img {
+    width: 100%;
+  }
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 14px;
+    &-favorite {
+      margin-right: auto;
+      background: #0f121d;
+      border-radius: 99px;
+      padding: 6px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      span {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: -0.02em;
+        color: #ffffff;
+        margin-left: 5px;
+      }
+    }
+    &-icon {
+      cursor: pointer;
+    }
+    &-icon.chartImage {
+      margin-right: 15px;
+    }
+  }
+}

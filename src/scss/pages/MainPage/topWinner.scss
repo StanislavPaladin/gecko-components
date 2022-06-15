@@ -1,0 +1,70 @@
+@import "../../variables";
+
+.topWinner {
+  display: flex;
+  height: 32px;
+  padding: 8px;
+  align-items: center;
+  background: #E3EAED;
+  border-radius: 500px;
+  justify-content: space-between;
+
+  .winner {
+    display: flex;
+    align-items: center;
+
+    .topWinner {
+      font-weight: 900;
+      font-size: 12px;
+      line-height: 20px;
+      color: #642E94;
+    }
+
+    .name {
+      width: 100px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      color: #8697A2;
+    }
+
+    .image {
+      width: 22px;
+      height: 22px;
+      margin: 0px 8px;
+    }
+  }
+
+  .text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .prize {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px 5px;
+    background: #FFFFFF;
+    border-radius: 50px;
+
+    .value,
+    .currency {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      letter-spacing: -1px;
+    }
+
+    .value {
+      color: #FF4F0F;
+    }
+
+    .currency {
+      color: #0F161F;
+      margin: 0px 8px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.sportSearch {
+  margin-bottom: 120px;
+  &-textList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 36px;
+    .text {
+      .category {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 18px;
+        color: #87898d;
+        text-transform: uppercase;
+      }
+      .title {
+        color: $text-primary;
+      }
+    }
+  }
+  &-itemsList {
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+  }
+}

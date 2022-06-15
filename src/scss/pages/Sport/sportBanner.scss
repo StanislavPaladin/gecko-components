@@ -1,0 +1,207 @@
+@import "../../variables";
+
+.sportBanner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+
+  &-left {
+    opacity: 1;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../assets/sportBanner.png");
+    background-size: cover;
+    background-position: 0px;
+    border-radius: 24px;
+    margin-right: 25px;
+
+    &-title {
+      color: $text-primary;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    &-btn {
+      margin-top: 36px;
+      width: 169px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 60px;
+      text-transform: uppercase;
+      color: #0F161F;
+      background: linear-gradient(148.64deg, #FFFFFF -1.63%, rgba(224, 224, 224, 0.54) 100%);
+      box-shadow: 0px 4px 70px #202151;
+      border-radius: 60px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 12px;
+      cursor: pointer;
+    }
+  }
+
+  &-right {
+    opacity: 1;
+    width: 100%;
+    height: 200px;
+    background-image: url("../../../assets/sportBanner.png");
+    background-size: cover;
+    background-position: 0px;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &-info {
+      width: 100%;
+      margin-top: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: $text-primary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15.1942px;
+      line-height: 15px;
+
+      &-league {
+        padding-left: 19px;
+        display: flex;
+        align-items: center;
+      }
+
+      &-live {
+        padding-right: 19px;
+        display: flex;
+        align-items: center;
+
+        color: $text-primary;
+
+        &-btn {
+          padding: 5px 7px;
+          padding-top: 7px;
+          margin-left: 10px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #FF4F0F;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+    }
+
+    &-teams {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      color: $text-primary;
+
+      &-teamOne {
+        padding-left: 19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        &-img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &-name {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+
+      &-score {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 36px;
+      }
+
+      &-teamTwo {
+        padding-right: 19px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        &-img {
+          width: 32px;
+          height: 32px;
+        }
+
+        &-name {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+    }
+
+    &-ratings {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+
+      &-item {
+        width: 32%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        background-color: $bg-global-dark;
+        color: $text-primary;
+        border-radius: 8px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        cursor: pointer;
+      }
+
+      &-item:nth-child(1) {
+        margin-left: 19px;
+        margin-right: 8px;
+      }
+
+      &-item:nth-last-child(1) {
+        margin-left: 8px;
+        margin-right: 19px;
+      }
+    }
+  }
+}
+
+.sportBanner.mobile {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.gradient {
+  background-image: url("../../../assets/sportBanner.png");
+  background-image: url("../../../assets/sportBanner.png"), $secondary-gradient;
+}

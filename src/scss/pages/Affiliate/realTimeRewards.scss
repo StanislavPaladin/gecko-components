@@ -1,0 +1,32 @@
+@import "../../variables";
+
+.realTimeRewards {
+  margin-top: 48px;
+  border-radius: 24px;
+  box-sizing: border-box;
+  &-h2 {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  &-wrap {
+    display: flex;
+    gap: 24px;
+    .col {
+      width: 50%;
+    }
+    @media screen and (max-width: 570px) {
+      flex-direction: column;
+      align-items: center;
+      .col {
+        width: 100%;
+      }
+    }
+  }
+  .primary-btn {
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 24px;
+    padding: 16px 28px;
+  }
+}

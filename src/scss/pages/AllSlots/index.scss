@@ -1,0 +1,156 @@
+@import "../../variables";
+
+.allSlots {
+  margin-bottom: 120px;
+  position: relative;
+
+  &-nav {
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #48437E;
+      border-radius: 50px;
+      color: rgba(255, 255, 255, 0.5);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 4px 6px;
+      padding-left: 12px;
+
+      cursor: pointer;
+    }
+
+    &-item.active {
+      background: linear-gradient(222.21deg, #52F28F 1.72%, #FFE65B 168.65%);
+border-radius: 50px;
+color: #232442;
+    }
+  }
+
+  &-filters {
+    margin-top: 23px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    height: 38px;
+
+    &-input {
+      flex: 1;
+      height: 100%;
+      position: relative;
+
+      .input {
+        width: 100%;
+        box-sizing: border-box;
+        height: 100%;
+        background: #3A3666;
+        border: 1px solid #575B7C;
+        border-radius: 99px;
+        color: #8697A2;
+        padding-left: 42px;
+        outline: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        transform: translateY(-8px);
+        top: 50%;
+        left: 16px;
+        width: 16px;
+        height: 16px;
+        background: url("../../../assets/icons/search.svg");
+      }
+    }
+
+    &-filter {
+      height: 100%;
+      padding: 0px 25px;
+      background: #3A3666;
+      border: 1px solid #575B7C;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      .textWithImage {
+        .text {
+          color: #6F778D;
+        }
+
+        .image {
+          path {
+            fill: #6F778D;
+          }
+        }
+      }
+
+      .filter-text {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 13px;
+        color: $text-primary;
+        margin-left: 8px;
+      }
+
+      .filter-text.count {
+        margin-left: 20px;
+        margin-right: 8px;
+      }
+
+      .arrow-icon {
+        path {
+          fill: #6f778d;
+        }
+      }
+    }
+
+    &-filter.filter {
+      @media screen and (max-width: 1440px) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  @media screen and (max-width: 858px) {
+    &-filters {
+      display: grid;
+      grid-template-areas:
+        "input input"
+        "filter1 filter2";
+      height: fit-content;
+
+      &-input,
+      &-filter {
+        height: 38px;
+      }
+
+      &-input {
+        grid-area: input;
+
+        .input {
+          width: 100%;
+        }
+      }
+
+      &-filter {
+        grid-area: filter2;
+
+        .filter-text.count {
+          margin-left: auto;
+        }
+      }
+
+      &-filter.filter {
+        grid-area: filter1;
+        margin-left: 0;
+      }
+    }
+  }
+}

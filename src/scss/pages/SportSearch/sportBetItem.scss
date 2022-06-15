@@ -1,0 +1,285 @@
+@import "../../variables.scss";
+
+.sportBetItem {
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 24px;
+  background-color: $bg-global-dark;
+  color: $text-primary;
+  // overflow-x: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 787px) {
+    padding: 18px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 0;
+  }
+
+  &-gradient {
+    z-index: 1;
+    position: absolute;
+    right: 12px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(270deg, $bg-global-dark 0%, rgba(19, 22, 37, 0) 97.4%);
+    @media screen and (max-width: 787px) {
+      display: none;
+    }
+  }
+
+  &-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 24px;
+    height: 100%;
+    border-right: 2px solid $bg-light-gray;
+    gap: 4px;
+
+    @media screen and (max-width: 787px) {
+      flex-direction: row;
+      height: auto;
+      border: none;
+      padding: 0;
+    }
+
+    &-day {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 15px;
+
+      @media screen and (max-width: 787px) {
+        font-size: 15px;
+        line-height: 15px;
+      }
+    }
+
+    &-time {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 20px;
+
+      @media screen and (max-width: 787px) {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  &-info {
+    padding: 0px 20px;
+    min-width: fit-content;
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @media screen and (max-width: 787px) {
+      padding-left: 0;
+      margin-top: 10px;
+      width: 100%;
+      border-bottom: 2px solid $bg-light-gray;
+    }
+
+    &-league {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &-logo {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+
+        @media screen and (max-width: 787px) {
+          width: 21px;
+          height: 21px;
+          margin-right: 4px;
+        }
+
+        & svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-name {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+
+        @media screen and (max-width: 787px) {
+          font-size: 16px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &-teams {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-start;
+      align-items: center;
+
+      @media screen and (max-width: 787px) {
+        margin-top: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
+
+      &-separator {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+
+        @media screen and (max-width: 787px) {
+          display: none;
+        }
+      }
+
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width:fit-content;
+
+        &-logo {
+          height: 24px;
+          width: 24px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 8px;
+
+          @media screen and (max-width: 787px) {
+            background: inherit;
+            width: 36px;
+            height: 36px;
+          }
+        }
+
+        &-name {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 13px;
+
+          @media screen and (max-width: 787px) {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  &-ratings {
+    padding-bottom: 10px;
+    width: fit-content;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-left: 5px;
+    max-width: fit-content;
+    position: relative;
+
+    @media screen and (max-width: 787px) {
+      padding-top: 10px;
+      max-width: 100%;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &-item {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      &-btns-wrapper {
+        width: 100%;
+        display: flex;
+        gap: 4px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        max-width: fit-content;
+        margin-right: 12px;
+      }
+
+      &-btns-wrapper:nth-child(1) {
+        margin-right: 0;
+      }
+
+      &-title {
+        color: $bg-global-normal;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 13px;
+        margin-bottom: 12px;
+      }
+
+      &-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 71px;
+        height: 50px;
+        margin-right: 4px;
+        background-color: $bg-light-gray;
+
+        &-title {
+          color: #6f778d;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 13px;
+        }
+
+        &-rating {
+          color: $text-primary;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+    }
+  }
+}

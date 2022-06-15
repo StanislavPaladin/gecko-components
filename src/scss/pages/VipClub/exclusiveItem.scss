@@ -1,0 +1,31 @@
+@import "../../variables";
+
+.exclusiveItem {
+  width: 24%;
+  color: $text-primary;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background: url("../../../assets/banners/exclusive.png"), #FF6B00;
+  border-radius: 24px;
+  padding: 30px;
+
+  &-title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 8px 0px;
+  }
+
+  &-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 76px;
+  }
+
+  @media screen and (max-width: 787px) {
+    width: 100%;
+    height: fit-content;
+  }
+}

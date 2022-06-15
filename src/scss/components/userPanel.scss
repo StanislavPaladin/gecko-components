@@ -1,0 +1,172 @@
+@import "../variables.scss";
+
+.userPanel {
+  top: 75px;
+  right: 230px;
+  position: absolute;
+  padding: 26px 0 26px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  height: fit-content;
+  margin: 12px 0px;
+  background-color: $bg-global-dark;
+  border-radius: 16px;
+  transition: 0.2s ease;
+
+  &-info {
+    width: 311px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    &-user {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+
+      &-name {
+        color: $text-primary;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 16px;
+      }
+
+      &-stars {
+        color: $text-gray;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+
+    &-settings {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: $text-secondary;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 13px;
+      &-icon {
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &-lvl {
+    width: 311px;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    &-info {
+      color: $text-secondary;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 10px;
+      line-height: 13px;
+      margin-bottom: 8px;
+
+      &-next-vip {
+        color: $text-primary;
+        margin-left: 12px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 13px;
+      }
+    }
+
+    &-exp {
+      width: 100%;
+      display: flex;
+      padding: 8px;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 50px;
+      background-color: rgba(61, 68, 89, 0.2);
+      color: $text-secondary;
+
+      &-bar {
+        width: 275px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: $bg-light-gray;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 2px;
+
+        &-filled {
+          width: 25px;
+          height: 2px;
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 311px;
+    height: 136px;
+    padding: 12px 12px 4px 12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: $bg-light-gray;
+    color: $text-secondary;
+    border-radius: 10px;
+    margin-bottom: 12px;
+
+    &-item {
+      cursor: pointer;
+      color: $text-secondary;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 16px;
+
+      &-icon {
+        margin-right: 8px;
+      }
+
+      &-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  @media screen and(max-width: 787px) {
+    right: 50%;
+    transform: translate(50%);
+  }
+}
+.logout {
+  align-self: flex-start;
+  margin-left: 24px;
+}
+
+.userPanel.hide {
+  pointer-events: none;
+  opacity: 0;
+}

@@ -1,0 +1,15 @@
+@import-normalize;
+@import "./fonts/Satoshi/stylesheet.scss";
+
+* {
+  margin: 0;
+  font-family: 'Satoshi', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,80 @@
+@import "../../variables";
+
+.cocoLotteryItem {
+  display: flex;
+  height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  color: #93acd3;
+
+  .matches,
+  .prize {
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    width: 120px;
+    color: #232442;
+  }
+
+  .matches.jackpot {
+    text-transform: uppercase;
+  }
+
+  .prize-wrap {
+    width: 180px;
+  }
+
+  .prize-wrap.empty {
+    opacity: 0;
+  }
+
+  .prize {
+    margin-left: auto;
+    color: #26A17B;
+    padding: 4px 16px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    background: rgba(38, 161, 123, 0.2);
+    border-radius: 500px;
+    text-align: center;
+  }
+
+  .cocoImg {
+    height: 80%;
+  }
+
+  .tickets {
+    .ticket {
+      width: 180px;
+      display: flex;
+      align-items: center;
+
+      p {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #fff;
+        padding: 4px 12px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 500px;
+      }
+    }
+  }
+}
+
+.cocoLotteryItem.active {
+  background: #383465;
+  border-radius: 8px;
+
+  .matches {
+    color: #fff;
+  }
+}

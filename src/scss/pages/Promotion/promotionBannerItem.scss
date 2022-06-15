@@ -1,0 +1,87 @@
+@import "../../variables";
+
+.promotionBannerItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  margin-left: auto;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    width: 279px;
+    padding-left: 15px;
+    border-radius: 5px 15px 15px 5px;
+    background-color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  &-coin {
+    margin-right: 30px;
+    margin-bottom: 5px;
+
+    &-wrapper {
+      z-index: 3;
+      position: absolute;
+      top: 0;
+      left: -100px;
+      width: 100%;
+      height: 100%;
+      margin-right: 10px;
+      background: url("../../../assets/Sun.svg") center center no-repeat !important;
+
+      &-pink {
+        z-index: 3;
+        position: absolute;
+        bottom: 0;
+        left: -100px;
+        margin-right: 10px;
+        background: url("../../../assets/Sun.svg") center center no-repeat !important;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: $text-primary;
+    margin-left: 35px;
+
+    &-title {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 13px;
+      line-height: 17px;
+    }
+
+    &-text {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 11px;
+      line-height: 17px;
+    }
+  }
+}
+
+.promotionBannerItem-wrapper.pink {
+  background: url("../../../assets/promotionBanner-pink.png") left no-repeat;
+}
+
+.promotionBannerItem-wrapper.yellow {
+  background: url("../../../assets/promotionBanner-yellow.png") left no-repeat;
+}
+
+.promotionBannerItem-wrapper.blue {
+  background: url("../../../assets/promotionBanner-blue.png") left no-repeat;
+}
+
+.promotionBannerItem-wrapper.purple {
+  background: url("../../../assets/promotionBanner-purple.png") left no-repeat;
+}

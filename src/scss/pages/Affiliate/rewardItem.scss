@@ -1,0 +1,29 @@
+@import "../../variables";
+
+.rewardItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 44px;
+  padding: 0px 32px;
+  box-sizing: border-box;
+
+  .rewardItem-span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #232442;
+
+  }
+}
+
+.rewardItem.active {
+  background: #383465;
+  border-radius: 8px;
+
+  .rewardItem-span {
+    color: #FFFFFF;
+  }
+}

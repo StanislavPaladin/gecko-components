@@ -1,0 +1,52 @@
+@import "../_variables.scss";
+
+.textWithImage {
+  display: flex;
+  align-items: center;
+
+  .image {
+    transition: 0.1s ease;
+    margin-right: 8px;
+
+    path {
+      fill: $text-secondary;
+    }
+  }
+
+  .text {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: $text-secondary;
+    user-select: none;
+    transition: 0.1s ease;
+  }
+
+  .empty {
+    margin: 0;
+  }
+}
+
+.textWithImage.active {
+  .image {
+    path {
+      fill: $text-primary;
+    }
+  }
+
+  .text {
+    color: $text-primary;
+  }
+}
+
+.textWithImage:hover {
+  .text {
+    color: #F7931A;
+  }
+}
+
+.textWithImage.reverse {
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}

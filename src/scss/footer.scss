@@ -1,0 +1,135 @@
+@import "./variables";
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-right: -20px;
+  background: #383465;
+  box-shadow: 0px -4px 25px rgba(28, 29, 61, 0.15);
+  padding: 35px 0px;
+
+  &-info {
+    padding: 30px 0px;
+    padding-left: 30px;
+    padding-right: 64px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+    p.info {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 16px;
+      color: #8697A2;
+      margin-top: 16px;
+      margin-bottom: 20px;
+    }
+
+    .images {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 30px;
+    }
+
+    p.copyright {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 9px;
+      line-height: 14px;
+      color: #55657E;
+    }
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 64px;
+    padding: 30px 0px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      li {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 24px;
+        color: #E3EAED;
+        list-style: none;
+      }
+
+      li:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-icons {
+    padding: 30px 0px;
+    padding-left: 64px;
+
+    .title {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 14px;
+      letter-spacing: -0.02em;
+      color: #55657E;
+      margin-bottom: 12px;
+    }
+
+    .items {
+      display: flex;
+      margin-bottom: 24px;
+      gap: 8px;
+
+      .item {
+        width: 36px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1540px) {
+  .footer {
+    grid-template-columns: 1fr 0.8fr 1fr;
+    padding-right: 20px;
+
+    &-links {
+      margin: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,auto);
+    &-info {
+      grid-column: 1 / 5;
+      border:none;
+    }
+    &-links {
+      flex-direction: column;
+
+    }
+    &-icons {
+      padding: 0;
+      padding-left: 10px;
+      .items {
+        flex-wrap: wrap;
+      }
+      .items.methods {
+        .item {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.footer.chatActive {
+  margin-right: 0;
+}

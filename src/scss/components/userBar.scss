@@ -1,0 +1,41 @@
+@import "../variables.scss";
+
+.userBar {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+  background: #262b3d;
+  border-radius: 50px;
+  &-account {
+    padding: 0px 40px;
+    padding-right: 16px;
+    .currency {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-weight: 400;
+      font-size: 11px;
+      line-height: 11px;
+      color: $text-primary;
+      cursor: pointer;
+      svg {
+        width: 24px;
+      }
+      .arrow {
+        path {
+          fill: $text-secondary;
+        }
+      }
+    }
+    .value {
+      margin-top: 2px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      line-height: 11px;
+      color: $text-primary;
+    }
+  }
+}

@@ -1,0 +1,270 @@
+@import "./variables";
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0px 65px;
+  height: 72px;
+  width: calc(100% - 240px);
+  box-sizing: border-box;
+  background: $bg-additional;
+
+  &-logo {
+    display: none;
+    
+    @media screen and (max-width: 646px) {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &-input {
+    position: relative;
+
+    .input {
+      width: 403px;
+      height: 38px;
+      background: #3A3666;
+      border: 1px solid #575B7C;
+      border-radius: 99px;
+      color: #8997A1;
+      padding-left: 42px;
+      outline: none;
+
+      @media screen and (max-width: 1600px) {
+        width: 340px;
+      }
+
+      @media screen and (max-width: 1390px) {
+        width: fit-content;
+        padding-right: 25px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: translateY(-8px);
+      top: 50%;
+      left: 16px;
+      width: 16px;
+      height: 16px;
+      background: url("../assets/icons/search.svg");
+    }
+
+    @media screen and (max-width: 1300px) {
+      .input {
+        width: auto;
+        padding: 0px 42px;
+      }
+    }
+  }
+
+  .reg-btn {
+    @media screen and (max-width: 646px) {
+      display: none;
+    }
+  }
+
+  &-btn.user {
+    margin-left: auto;
+    margin-right: -30px;
+
+    @media screen and (max-width: 418px) {
+      width: 75px;
+    }
+  }
+
+  &-btn {
+    width: 136px;
+    height: 40px;
+    margin-left: 12px;
+    position: relative;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .user-image {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    .image-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      padding: 4px;
+      box-sizing: border-box;
+      background: #262B3D;
+      border-radius: 50px;
+      position: relative;
+      &-img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .burger-wrap {
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      margin-left: -10px;
+      padding-left: 12px;
+      padding-right: 10px;
+      height: 26px;
+      background: #262B3D;
+      border-radius: 0px 50px 50px 0px;
+
+      @media screen and (max-width:646px) {
+        display: none;
+      }
+    }
+  }
+
+  &-chat {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50px;
+    cursor: pointer;
+
+    @media screen and (max-width: 646px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .userBar {
+    margin-right: 12px;
+    @media screen and (max-width:646px) {
+      margin-right: 4px;
+    }
+  }
+
+  &-chat.diamond {
+    display: none;
+  }
+
+  &-icon {
+    margin-left: 24px;
+    cursor: pointer;
+
+    @media screen and (max-width: 787px) {
+      margin-left: 12px;
+    }
+
+    @media screen and (max-width: 787px) {
+      display: none;
+    }
+  }
+  &-icon.chat-icon {
+    margin-top: 5px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+
+    &-chat.diamond {
+      display: flex;
+      margin-right: 20px;
+      margin-left: 0;
+      cursor: pointer;
+      background: #48437E;
+border-radius: 8px;
+
+      svg {
+        width: 18px;
+        height:18px;
+      }
+    }
+    &-chat.diamond.search {
+      margin-left: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    &-input {
+      display: none;
+    }
+  }
+
+  @media screen and(max-width: 646px) {
+    padding: 0px 20px;
+
+    &-chat {
+      display: none;
+    }
+
+    &-chat.diamond {
+      margin-right: 0;
+    }
+  }
+}
+
+.header.full {
+  width: 100%;
+}
+
+@media screen and (min-width: 1023px) {
+  .header.sidebarHidden {
+    width: calc(100% - 72px);
+  }
+}
+
+
+.header-wrap {
+  position: fixed;
+  z-index: 110;
+  width: 100%;
+
+  @media screen and (max-width: 647px) {
+    position: relative;
+  }
+}
+
+.header-mobile-menu {
+  display: none;
+
+  @media screen and (max-width: 647px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    padding: 10px 20px;
+    width: 100%;
+
+    .header-mobile-item {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      margin-right: 10px;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    overflow-x: auto;
+  }
+}
+
+.header-mobile-menu.align {
+  justify-content: flex-start;
+
+  .mobile-btn {
+    width: 202px;
+    height:44px;
+    padding: 0;
+  }
+}

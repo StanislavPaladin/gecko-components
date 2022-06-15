@@ -1,0 +1,217 @@
+@import "./_variables.scss";
+
+@mixin primary-btn($minWidth: 196px, $padding: 17px 0px) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: $text-primary;
+  min-width: $minWidth;
+  padding: $padding;
+  background: linear-gradient(180deg, rgba(8, 199, 146, 0) 0%, #126E82 100%), linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
+  border-radius: 99px;
+  border: 0px;
+  cursor: pointer;
+  white-space: no-wrap;
+}
+
+@mixin primary-btn-small {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 99px;
+  border: 0px;
+  color: $text-primary;
+  cursor: pointer;
+}
+
+@mixin pinkBtnTransition() {
+  transition: 0.2s ease;
+  background: linear-gradient(180deg, rgba(8, 199, 146, 0) 0%, #126E82 100%), linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
+
+  &:hover {
+    opacity: 0.9;
+
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+@mixin blueBtnTransition() {
+  transition: 0.2s ease;
+
+  &:hover {
+    background: #5ca6f0;
+  }
+
+  &:active {
+    background: #1361ae;
+  }
+}
+
+.primary-btn {
+  @include primary-btn();
+  @include pinkBtnTransition();
+}
+
+.primary-btn-small {
+  @include primary-btn-small();
+  @include pinkBtnTransition();
+}
+
+.primary-btn-small.active {
+  @include primary-btn-small();
+}
+
+.secondary-btn-small {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 11px;
+  letter-spacing: -0.05em;
+  color: $text-secondary;
+  padding: 5.5px 10px;
+  background: #1a1f2d;
+  outline: none;
+  border: none;
+  transition: 0.1s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.secondary-btn-small.active {
+  color: $text-primary;
+}
+
+.secondary-btn {
+  position: relative;
+  border: 0;
+  outline: none;
+  color: #67B26F;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+
+  cursor: pointer;
+}
+
+.secondary-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  padding: 2px;
+  background: linear-gradient(45deg, #67A86A, #61F28B);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.list-btn {
+  padding: 10px 18px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13px;
+  letter-spacing: -0.02em;
+  color: $text-secondary;
+  background: #262b3d;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: 0.1s ease;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+.list-btn.active {
+  color: $text-primary;
+}
+
+.additional-btn {
+  background: rgba(225, 70, 128, 0.1);
+  border-radius: 60px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 12px;
+  color: #e14680;
+  border: 0;
+  outline: none;
+  padding: 18px 30px;
+  cursor: pointer;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  background: rgba(22, 26, 42, 0.6);
+  backdrop-filter: blur(20px);
+  position: fixed;
+}
+
+.btn-2fa {
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.01em;
+  color: #4cd06e;
+  background: #3d4459;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.1s ease;
+
+  &:hover {
+    background: #373f5c;
+  }
+
+  &:active {
+    background: #242c43;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $text-secondary;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0f121d;
+  border-radius: 10px;
+}

@@ -1,0 +1,48 @@
+@import "../../variables";
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0px 30px;
+  padding-right: 50px;
+  .main {
+    width: 100%;
+    margin-top: 25px;
+    position: relative;
+  }
+
+  @media screen and(max-width: 646px) {
+    padding: 0px 18px;
+  }
+}
+
+.wrap {
+  overflow: none;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  left: 0px;
+  top: -150px;
+}
+.bg2 {
+  position: absolute;
+  top: 30%;
+  left: -350px;
+}
+.bg3 {
+  position: absolute;
+  top: 46.5%;
+  right: -850px;
+}
+
+.container.sport {
+  @media screen and(max-width: 1440px) {
+    padding: 0px 21px;
+  }
+  @media screen and(max-width: 646px) {
+    padding: 0px 18px;
+  }
+}

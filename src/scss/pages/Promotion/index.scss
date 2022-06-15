@@ -1,0 +1,407 @@
+@import "../../variables";
+@import "../../common";
+
+.promotion {
+  margin-top: 23px;
+  position: relative;
+
+  .details {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+    color: #FF4F0F;
+    cursor: pointer;
+
+    svg {
+      margin-left: 8px;
+
+      path {
+        stroke: #FF4F0F;
+      }
+    }
+  }
+
+  &-shitcode {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    &-item {
+      box-sizing: border-box;
+      width: 49%;
+      // padding: 12px 16.5px;
+      background: $bg-primary;
+      border-radius: 24px;
+
+      .wrap {
+        background: url("../../../assets/banners/promotions-shitcode1.png"), linear-gradient(269.31deg, rgba(247, 147, 26, 0.47) -99.23%, #443F91 95.59%), #232442;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border-radius: 24px;
+        border-radius: 24px;
+        padding: 25px;
+        box-sizing: border-box;
+        height: 164px;
+
+        h3 {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          color: $text-primary;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          color: #FFFFFF;
+          margin-bottom: 8px;
+        }
+
+        .head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 370px;
+        }
+
+        .enterCode {
+          margin-top: 14px;
+          width: 370px;
+          display: flex;
+          background: #3A3666;
+          border: 1px solid #575B7C;
+          border-radius: 99px;
+
+          .primary-btn {
+            background-color: $btn-secondary;
+            min-width: fit-content;
+            padding: 16px 44px;
+          }
+
+          input {
+            width: 100%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            padding-left: 15px;
+
+            &::placeholder {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 18px;
+              color: rgba(255, 255, 255, 0.5);
+            }
+          }
+        }
+      }
+    }
+
+    &-item.shitcode {
+      .wrap {
+        background: url("../../../assets/banners/promotions-shitcode2.png"), linear-gradient(269.31deg, rgba(247, 147, 26, 0.47) -99.23%, #443F91 95.59%), #232442;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    @media screen and (max-width: 787px) {
+      flex-direction: column;
+      margin: 100px 0px;
+      gap: 30px;
+
+      &-item {
+        width: 100%;
+
+        .wrap {
+          height: fit-content;
+
+          .enterCode {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  &-medals {
+    margin-top: 23px;
+    margin-bottom: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 188px;
+    background: linear-gradient(90deg, #2AA184 0%, rgba(42, 161, 132, 0) 67.5%), rgba(56, 53, 101, 0.8);
+    border-radius: 24px;
+
+    .wrap {
+      width: fit-content;
+      padding: 35px 41px;
+      color: $text-primary;
+
+      h3 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 12px;
+        margin-bottom: 34px;
+      }
+    }
+
+    .details-mobile {
+      display: none;
+    }
+
+    @media screen and(max-width: 787px) {
+      flex-direction: column;
+      height: fit-content;
+      overflow: hidden;
+      padding: 26px;
+      position: relative;
+
+      .details {
+        display: none;
+      }
+
+      .details-mobile {
+        display: block;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-top: 100px;
+      }
+
+      .wrap {
+        text-align: center;
+        padding: 0;
+      }
+
+      &-img {
+        position: absolute;
+        left: 0px;
+        bottom: 55px;
+      }
+    }
+  }
+
+  &-bonuses {
+    margin-bottom: 80px;
+
+    .bonus-list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 27px;
+    }
+
+    &-btn {
+      width: fit-content;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #0F161F;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 28px;
+      letter-spacing: -0.02em;
+    }
+
+    .bonus {
+      position: relative;
+      width: 24%;
+      height: 380px;
+      background: url("../../../assets/banners/bonuses.png"), linear-gradient(180deg, #383465 0%, #232442 76.52%);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: cover;
+      border-radius: 24px;
+      position: relative;
+
+      &-img {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 147px;
+        height: auto;
+      }
+
+      .wrap {
+        height: 100%;
+        box-sizing: border-box;
+        position: relative;
+        padding: 26px 31px;
+        color: $text-primary;
+        position: relative;
+        z-index: 100;
+
+        h3 {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          max-width: 250px;
+        }
+
+        p {
+          margin-top: 8px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 18px;
+          max-width: 186px;
+          padding-bottom: 20px
+        }
+
+        .bonus-btn {
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translate(-50%);
+          background: linear-gradient(148.64deg, #FFFFFF -1.63%, rgba(224, 224, 224, 0.54) 100%);
+          box-shadow: 0px 4px 70px #202151;
+          border-radius: 60px;
+          border: 0;
+          padding: 17px 20px;
+          width: 80%;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 18px;
+        }
+
+        .bonus-img-mobile {
+          display: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 787px) {
+      flex-direction: column;
+
+      .bonus {
+        width: 100%;
+        overflow: hidden;
+
+        .wrap {
+          padding: 10px;
+          margin: 0 auto;
+          text-align: center;
+          padding-bottom: 40px;
+
+          h3 {
+            margin-bottom: 10px;
+          }
+
+          h3,
+          p {
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+          }
+
+          .bonus-img-mobile {
+            display: block;
+            width: 45%;
+            margin: 0px auto;
+          }
+
+          .primary-btn {
+            margin-top: 14px;
+          }
+        }
+
+        &-img {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-other-bonuses {
+    color: $text-primary;
+    margin-bottom: 120px;
+
+    h2 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 25px;
+      margin-bottom: 28px;
+    }
+
+    &-list {
+      display: flex;
+      justify-content: space-between;
+
+      .other-bonus {
+        width: 32%;
+        height: 200px;
+        box-sizing: border-box;
+        padding: 27px 31px;
+        padding-right: 0;
+        background: url("../../../assets/otherBonus1.png"),
+          linear-gradient(180deg, #161A2A -37.2%, #642E94 254.71%), #232442;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        border-radius: 24px;
+
+        h3 {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+        }
+
+        p {
+          margin-top: 8px;
+          width: 180px;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+
+      .other-bonus:nth-child(2) {
+        background: url("../../../assets/otherBonus2.png"),
+          linear-gradient(180deg, #161A2A -37.2%, #642E94 254.71%), #232442;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+
+      .other-bonus:nth-child(3) {
+        background: url("../../../assets/otherBonus3.png"),
+          linear-gradient(180deg, #161A2A -37.2%, #642E94 254.71%), #232442;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+
+      @media screen and (max-width: 787px) {
+        gap: 30px;
+        flex-direction: column;
+
+        .other-bonus {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "../_variables.scss";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-primary;
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    &-item {
+      cursor: pointer;
+      width: 37px;
+      height: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 18px;
+      background-color: rgba(61, 68, 89, 0.25);
+      border-radius: 10px;
+      & svg {
+        & path {
+          stroke: $text-primary;
+        }
+      }
+    }
+    &-item.active {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.empty {
+  background-color: transparent;
+  margin-top: 3px;
+  cursor: auto;
+}

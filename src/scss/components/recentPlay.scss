@@ -1,0 +1,41 @@
+@import "../_variables.scss";
+
+.recentPlay {
+  position: relative;
+  &-btn {
+    background: #202439;
+    border-radius: 99px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 28px;
+    color: $text-primary;
+    padding: 8.5px 20px;
+    width: fit-content;
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
+  &-list {
+    margin-bottom: 120px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 20px 2%;
+    .slotItem {
+      @media screen and (max-width: 1610px) {
+        width: 18%;
+      }
+      @media screen and (max-width: 787px) {
+        width: 47.5%;
+      }
+    }
+    @media screen and (max-width: 1610px) {
+      gap: 20px 2.5%;
+    }
+    @media screen and (max-width: 787px) {
+      gap: 20px 5%;
+      padding: 14px;
+    }
+  }
+}

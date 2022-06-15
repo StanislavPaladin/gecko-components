@@ -1,0 +1,131 @@
+@import "../../variables";
+
+.promotionBanner {
+  border-radius: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("../../../assets/banners/promotions.png"), linear-gradient(348.48deg, #FACD68 41.53%, #EB6932 174.8%);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  .col {
+    width: fit-content;
+
+    h1 {
+      font-style: normal;
+      font-weight: 800;
+      font-size: 35px;
+      line-height: 48px;
+      letter-spacing: 0.01em;
+      color: #040861;
+    }
+
+    .unlock-speed {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 12px;
+      color: #040861;
+
+      span {
+        font-size: 24px;
+        font-weight: 800;
+        color: #FF4F0F;
+      }
+    }
+
+    .available {
+      margin-top: 13px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .date {
+      font-size: 21px;
+      font-weight: 700;
+      color: #040861;
+    }
+
+    .details {
+      margin-top: 50px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.01em;
+      color: #FF4F0F;
+      cursor: pointer;
+
+      svg {
+        margin-left: 8px;
+
+        path {
+          stroke: #FF4F0F;
+        }
+      }
+    }
+    
+    .promotion-banners {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap:28px 24px;
+    }
+
+    .promotionBanner-mobile {
+      display: none;
+
+      .info-wrap {}
+    }
+  }
+
+  .col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  @media screen and (max-width: 787px) {
+    flex-direction: column;
+    // background-image:none;
+    background-size: 60%;
+    background-position: right;
+    gap: 30px;
+    padding: 22px;
+
+    .col {
+      width: 100%;
+
+      .promotionBannerItem {
+        margin: 0;
+      }
+
+      .available,
+      .date,
+      .details {
+        display: none;
+      }
+
+      .promotionBanner-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 14px;
+
+        .available,
+        .date,
+        .details {
+          display: block;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

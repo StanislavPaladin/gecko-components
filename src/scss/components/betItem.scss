@@ -1,0 +1,88 @@
+@import "../_variables.scss";
+
+.betItem {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 17px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background 0.3s ease;
+
+  .item {
+    width: 16%;
+
+    &:nth-child(3) {
+      width: 20%;
+    }
+
+    @media screen and (max-width: 646px) {
+      width: 150px;
+    }
+  }
+
+  &-dice {
+    .text {
+      color: #8697A2;
+    }
+
+    .textWithImage:hover {
+      .text {
+        color: #8697A2;
+      }
+    }
+  }
+
+  &-time {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    color: #8697A2;
+  }
+
+  &-player {
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-right: 10px;
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      color: #8697A2;
+    }
+  }
+
+  &-multiplier {
+    .wrap {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 20px;
+      color: #26A17B;
+      padding: 4px 16px;
+      background: rgba(38, 161, 123, 0.2);
+      border-radius: 500px;
+      width: fit-content;
+    }
+  }
+
+  &-multiplier.active {
+    .wrap {
+      background: rgba(45, 220, 75, 0.16);
+      color: #2ddc4b;
+    }
+  }
+
+  @media screen and (max-width: 646px) {
+    width: fit-content;
+  }
+}
+
+.betItem.active {
+  background: #FFFFFF;
+  border-top: 2px solid rgba(97, 103, 131, 0.2);
+  border-bottom: 2px solid rgba(97, 103, 131, 0.2);
+}

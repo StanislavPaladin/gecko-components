@@ -1,0 +1,49 @@
+@import "../_variables.scss";
+
+.buttonsNavigation {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  max-width: fit-content;
+  padding: 4px 6px;
+  border: 2px solid #C4C4C4;
+  border-radius: 500px;
+  gap: 12px;
+
+  &-btn {
+    flex: 0 0 auto;
+    padding: 12px 24px;
+    background: rgba(97, 103, 131, 0.2);
+    border-radius: 50px;
+    border: none;
+    .textWithImage {
+      .text {
+        color: #3C3F5C;
+      }
+    }
+  }
+
+  &-btn.active {
+    background: linear-gradient(222.21deg, #52F28F 1.72%, #FFE65B 168.65%);
+    border-radius: 50px;
+    .textWithImage {
+      .text {
+        color: #232442;
+      }
+    }
+  }
+
+  &-btn:hover {
+    cursor: pointer;
+
+    .textWithImage {
+      .text {
+        color: #F7931A;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
