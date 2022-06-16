@@ -1,10 +1,14 @@
 import React from "react";
 
+import {ReactComponent as LogoutIcon} from "../../assets/icons/logoutIcon.svg"
+import {ReactComponent as ArrowRight} from "../../assets/icons/arrowRight.svg"
+
 import "../../scss/components/userPanel.scss";
 
-const UserPanel = ({ handleUserInfo, name, active }) => {
+const UserPanel = ({ handleUserInfo, name="Leva Shaikers", active }) => {
   const userItems = [
     {text: "User Information", active: true},
+    {text: "Statistics"},
     {text: "Transaction"},
     {text: "Live Support"},
     {text: "Affiliate"},
@@ -15,6 +19,7 @@ const UserPanel = ({ handleUserInfo, name, active }) => {
     {text: "VIP Club"},
   ];
   return (
+    <div className={`userMenu-layout ${active ? "" : "hide"}`}>
     <div className={`userPanel ${active ? "" : "hide"}`}>
       <div className="userPanel-info">
         <div className="userPanel-info-user">
@@ -49,23 +54,16 @@ const UserPanel = ({ handleUserInfo, name, active }) => {
       <div className="userPanel-main">
         {userItems.map(({text, active}) => (
           <div key={text} className="userPanel-main-item" onClick={() => active && handleUserInfo()}>
-            <img
-              className="userPanel-main-item-icon"
-              src={require("../../assets/icons/People.png")}
-              alt="people-icon"
-            />
+            <ArrowRight/>
             <span className="userPanel-main-item-text">{text}</span>
           </div>
         ))}
       </div>
       <div className="userPanel-main-item logout">
-        <img
-          className="userPanel-main-item-icon"
-          src={require("../../assets/icons/People.png")}
-          alt="people-icon"
-        />
+        <LogoutIcon/>
         <span className="userPanel-main-item-text">Logout</span>
       </div>
+    </div>
     </div>
   );
 };
