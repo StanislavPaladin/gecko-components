@@ -14,11 +14,10 @@
   border-radius: 16px;
 
   @media screen and (max-width: 646px) {
-    width: 358px;
-    left: calc((100% - 358px)/2);
-    min-height: 750px;
-    max-height: 808px;
-    top: 1%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     background-color: rgba(5, 2, 24, 0.5);
     border-radius: 0;
   }
@@ -130,8 +129,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 0 40px 0;
-
+    // padding: 20px 0 40px 0;
 
     &-wrapper {
       position: absolute;
@@ -143,11 +141,11 @@
 
       @media screen and (max-width: 646px) {
         position: absolute;
-        top: 188px;
+        top: 120px;
         height: auto;
         overflow-y: scroll;
-      overflow-x: hidden;
-      height: calc(100vh - 10vh - 130px);
+        overflow-x: hidden;
+        height: calc(100vh - 10vh - 130px);
       }
 
       &::-webkit-scrollbar {
@@ -198,6 +196,7 @@
         margin-bottom: 22px;
         gap: 0px;
       }
+
       & .inputComponent-wrapper {
         height: 54px;
       }
