@@ -31,16 +31,16 @@ const SignIn = ({
           <div className="signIn-header-close" onClick={() => setModalActive("")}>
             <CloseBtn />
           </div>
-          <div className="signIn-header-coin">
+          {/* <div className="signIn-header-coin">
             <FormCoin />
           </div>
           <div className="signIn-header-btn">
             <div className="signIn-header-btn-image">
               <DiamondImage />
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="signUp-form-wrapper">
+        <div className="signIn-form-wrapper">
         <div className="signIn-form">
           <div className="signIn-form-title">Sign In</div>
           <div className="signIn-form-inputs">
@@ -65,11 +65,13 @@ const SignIn = ({
           </div>
           <div className="signIn-form-help">Forget password?</div>
           <div className="signIn-form-btns">
-            <div className="signIn-form-btns-primary">Sign in</div>
+            <div className="signIn-form-btns-primary">
+              <div className="signIn-form-btns-primary-blur"></div>
+              Sign in</div>
             <div className="signIn-form-btns-secondary">Sign up</div>
           </div>
           <div className="signIn-form-tools">
-            <div className="signIn-form-tools-title">Log In directly</div>
+            <div className="signIn-form-tools-title">Sing In directly with</div>
             <div className="signIn-form-tools-wrapper">
               <div className="signIn-form-tools-wrapper-item">
                 <Google />

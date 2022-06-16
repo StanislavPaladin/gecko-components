@@ -2,7 +2,7 @@
 
 .signIn {
   width: 543px;
-  height: 806px;
+  height: 630px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -10,22 +10,33 @@
   position: absolute;
   top: 10%;
   left: calc((100% - 543px)/2);
-  //transform: translate(-50%, -45%);
+  background-color: #383465;
+  border-radius: 16px;
 
   @media screen and (max-width: 646px) {
     width: 358px;
     left: calc((100% - 358px)/2);
-    height: fit-content;
-    top: 10%;
+    min-height: 750px;
+    max-height: 808px;
+    top: 1%;
+    background-color: rgba(5, 2, 24, 0.5);
+    border-radius: 0;
   }
 
   &-header {
-    background: url("../../assets/form-header.svg") center center no-repeat;
+    // background: url("../../assets/form-header.svg") center center no-repeat;
+    background: transparent;
     background-size: contain;
     background-position: center;
     width: 100%;
-    height: 148px;
     position: relative;
+
+    @media screen and (max-width: 646px) {
+      height: 340px;
+      position: absolute;
+      top: -40px;
+      background: url("../../assets/signInHeaderImage.svg") top no-repeat;
+    }
 
     &-close {
       position: absolute;
@@ -36,7 +47,8 @@
       width: 26px;
 
       @media screen and (max-width: 646px) {
-        top: 20px;
+        display: none;
+        top: 0px;
         width: 26px;
         width: 26px;
       }
@@ -102,15 +114,16 @@
         top: 0px;
       }
     }
+
     @media screen and (max-width:646px) {
-        background-position: 0px 50px;
+      background-position: 0px 50px;
     }
   }
 
   &-form {
     height: fit-content;
     width: 100%;
-    background: $bg-global-dark;
+    background: transparent;
     color: $text-primary;
     border-radius: 0px 16px 16px 16px;
     display: flex;
@@ -119,19 +132,32 @@
     justify-content: flex-start;
     padding: 20px 0 40px 0;
 
+
     &-wrapper {
       position: absolute;
-      top: 130px;
+      top: 0px;
+      height: 100%;
       overflow-y: scroll;
       overflow-x: hidden;
-      height: calc(100vh - 10vh - 160px);
       width: 100%;
 
-      &::-webkit-scrollbar { width: 0; }
+      @media screen and (max-width: 646px) {
+        position: absolute;
+        top: 188px;
+        height: auto;
+      }
 
-      & { -ms-overflow-style: none; }
+      &::-webkit-scrollbar {
+        width: 0;
+      }
 
-      & { overflow: -moz-scrollbars-none; }
+      & {
+        -ms-overflow-style: none;
+      }
+
+      & {
+        overflow: -moz-scrollbars-none;
+      }
 
     }
 
@@ -139,14 +165,19 @@
       margin-top: 10px;
       margin-bottom: 30px;
       font-style: normal;
+      font-style: normal;
       font-weight: 700;
       font-size: 30px;
-      line-height: 30px;
+      line-height: 41px;
 
       @media screen and (max-width: 646px) {
         margin-bottom: 12px;
-        font-size: 26px;
-        line-height: 26px;
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 46px;
+        text-align: left;
+        width: 100%;
+        margin-left: 16px;
       }
     }
 
@@ -157,23 +188,27 @@
       align-items: center;
       justify-content: center;
       gap: 12px;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
 
       @media screen and (max-width: 646px) {
         width: 90%;
         margin-bottom: 22px;
         gap: 0px;
       }
+      & .inputComponent-wrapper {
+        height: 54px;
+      }
     }
 
     &-help {
-      color: $color-pink;
+      color: #58F28D;
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 16px;
       margin-bottom: 36px;
-      border-bottom: 1px solid $color-pink;
+      border-bottom: 1px solid #58F28D;
+      cursor: pointer;
 
       @media screen and (max-width: 646px) {
         margin-bottom: 22px;
@@ -200,19 +235,30 @@
       }
 
       &-primary {
+        position: relative;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 332px;
-        background-color: $color-pink;
+        background: linear-gradient(180deg, rgba(8, 199, 146, 0) 0%, #126E82 100%), linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
         border-radius: 99px;
         cursor: pointer;
 
         @media screen and (max-width: 646px) {
           // height: 100%;
-          height: 55px;
+          height: 48px;
           width: 100%;
+        }
+
+        &-blur {
+          position: absolute;
+          width: 102%;
+          height: 110%;
+          filter: blur(5px);
+          background: linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
+          opacity: 0.5;
+          border-radius: 99px;
         }
       }
 
@@ -222,19 +268,20 @@
         align-items: center;
         justify-content: center;
         width: 120px;
-        background-color: $bg-light-gray;
+        background: rgba(255, 255, 255, 0.3);
         border-radius: 99px;
         cursor: pointer;
 
         @media screen and (max-width: 646px) {
           width: 100%;
-          height: 55px;
+          height: 48px;
         }
       }
     }
 
     &-tools {
       &-title {
+        font-style: normal;
         font-weight: 400;
         font-size: 12px;
         line-height: 25px;
@@ -257,6 +304,7 @@
         justify-content: center;
         background-color: $bg-light-gray;
         border-radius: 50px;
+
 
         &-item {
           width: 32px;
