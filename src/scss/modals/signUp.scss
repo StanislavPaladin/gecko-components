@@ -2,32 +2,41 @@
 
 .signUp {
   width: 543px;
-  height: 903px;
+  min-height: 700px;
+  max-height: 772px;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
   position: absolute;
-  top: 10%;
+  top: 6%;
   left: calc((100% - 543px)/2);
+  background-color: #383465;
   //transform: translate(-50%, -40%);
+  border-radius: 16px;
 
   @media screen and (max-width: 646px) {
+    background-color: rgba(5, 2, 24, 0.5);
     width: 358px;
     left: calc((100% - 358px)/2);
     height: fit-content;
-    top:10%;
+    top: 3%;
+    border-radius: 0px;
   }
 
   &-header {
-    background: url("../../assets/form-header.svg") center center no-repeat;
+
     background-size: contain;
     background-position: center;
     width: 100%;
-    height: 148px;
     position: relative;
+
     @media screen and (max-width: 646px) {
+      background: url("../../assets/signUpHeaderImage.svg") top no-repeat;
       background-position: 0px 50px;
+      height: 400px;
+      position: absolute;
+      top: -55px;
     }
 
     &-close {
@@ -39,6 +48,7 @@
       width: 26px;
 
       @media screen and (max-width: 646px) {
+        display: none;
         top: 20px;
         width: 26px;
         width: 26px;
@@ -110,28 +120,41 @@
   &-form {
     height: fit-content;
     width: 100%;
-    background: $bg-global-dark;
+    background-color: #383465;
     color: $text-primary;
     border-radius: 0px 16px 16px 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 20px 0 40px 0;
+
+    @media screen and (max-width: 646px) {
+      background-color: transparent;
+    }
 
     &-wrapper {
       position: absolute;
-      top: 130px;
+      top: 40px;
       overflow-y: scroll;
       overflow-x: hidden;
-      height: calc(100vh - 10vh - 160px);
+      height: calc(100vh - 10vh - 60px);
       width: 100%;
+      @media screen and (max-width: 646px) {
+        top: 220px;
+        height: calc(100vh - 10vh - 215px);
+      }
 
-      &::-webkit-scrollbar { width: 0; }
+      &::-webkit-scrollbar {
+        width: 0;
+      }
 
-      & { -ms-overflow-style: none; }
+      & {
+        -ms-overflow-style: none;
+      }
 
-      & { overflow: -moz-scrollbars-none; }
+      & {
+        overflow: -moz-scrollbars-none;
+      }
 
     }
 
@@ -144,7 +167,10 @@
       line-height: 30px;
 
       @media screen and (max-width: 646px) {
-        margin-bottom: 12px;
+        width: 100%;
+        text-align-last: left;
+        margin-left: 24px;
+        margin-bottom: 24px;
         font-size: 26px;
         line-height: 26px;
       }
@@ -161,23 +187,26 @@
       border-bottom: 1px solid rgba(85, 101, 126, 0.2);
 
       @media screen and (max-width: 646px) {
+        width: 90%;
         margin-bottom: 22px;
         gap: 0px;
       }
-
+      & .inputComponent-wrapper {
+        height: 54px;
+      }
       &-referal {
         width: 248px;
         cursor: pointer;
         background-color: inherit;
         color: $text-secondary;
+        opacity: .3;
         border: none;
-        border-bottom: 1px solid $text-secondary;
         -moz-appearance: none;
         -webkit-appearance: none;
         background-image: url("../../assets/icons/arrowDown.svg");
         background-repeat: no-repeat, repeat;
         background-position: right;
-        margin-bottom: 24px;
+        margin: 32px 0 36px 0;
       }
 
       &-referal:focus {
@@ -210,13 +239,14 @@
 
       &-pseudocheckbox {
         width: 459px;
-        font-weight: 400;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        font-size: 11px;
-        line-height: 11px;
-        color: $text-secondary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 13px;
+        color: #55657E;
 
         @media screen and (max-width: 646px) {
           width: 60%;
@@ -235,18 +265,20 @@
         vertical-align: baseline;
         background-color: transparent;
         margin-right: 8px;
+
         @media screen and (max-width: 646px) {
           height: 20px;
           width: 27px;
         }
       }
 
-      &-checkbox:checked + .signUp-form-agree-pseudocheckbox::before {
+      &-checkbox:checked+.signUp-form-agree-pseudocheckbox::before {
         padding: 3px 6px;
         content: url("../../assets/icons/checkbox-green.svg");
         border: 2px solid #4cd06e;
         border-radius: 4px;
         background-color: transparent;
+
         @media screen and (max-width: 646px) {
           padding: 3px 3px;
           width: 22px;
@@ -271,18 +303,19 @@
         justify-content: center;
         gap: 6px;
         top: -40px;
-        left: 130px;
+        left: 150px;
         width: 141px;
         height: 30px;
-        background-color: $color-pink;
+        background-color: #5C33CF;
         color: $text-primary;
         font-style: normal;
         font-weight: 700;
         font-size: 10px;
         line-height: 10px;
         border-radius: 55px;
+
         @media screen and (max-width: 646px) {
-          left: 0;
+          left: 30px;
         }
       }
 
@@ -298,19 +331,30 @@
       }
 
       &-primary {
+        position: relative;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 332px;
-        background-color: $color-blue;
+        background: linear-gradient(180deg, rgba(8, 199, 146, 0) 0%, #126E82 100%), linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
         border-radius: 99px;
         cursor: pointer;
 
         @media screen and (max-width: 646px) {
           // height: 100%;
-          height: 50px;
+          height: 48px;
           width: 100%;
+        }
+
+        &-blur {
+          position: absolute;
+          width: 102%;
+          height: 110%;
+          filter: blur(5px);
+          background: linear-gradient(163.03deg, #67A86A 2.74%, #61F28B 97.63%);
+          opacity: 0.5;
+          border-radius: 99px;
         }
       }
 
@@ -320,13 +364,13 @@
         align-items: center;
         justify-content: center;
         width: 120px;
-        background-color: $bg-light-gray;
+        background: rgba(255, 255, 255, 0.3);
         border-radius: 99px;
         cursor: pointer;
 
         @media screen and (max-width: 646px) {
           width: 100%;
-          height: 55px;
+          height: 48px;
         }
       }
     }
@@ -355,6 +399,9 @@
         justify-content: center;
         background-color: $bg-light-gray;
         border-radius: 50px;
+        @media screen and (max-width: 646px) {
+          margin-bottom: 20px;
+        }
 
         &-item {
           cursor: pointer;
@@ -369,13 +416,14 @@
 .pink-square {
   z-index: 0;
   top: -28px;
-  left: 140px;
+  left: 160px;
   position: absolute;
   width: 18px;
   height: 18px;
-  background-color: $color-pink;
+  background-color: #5C33CF;
   transform: rotate(-45deg);
+
   @media screen and (max-width: 646px) {
-    left: 10px;
+    left: 40px;
   }
 }

@@ -25,7 +25,7 @@
 
   &-header {
     // background: url("../../assets/form-header.svg") center center no-repeat;
-    background: transparent;
+    background-color: rgba(5, 2, 24, 0.5);
     background-size: contain;
     background-position: center;
     width: 100%;
@@ -145,6 +145,9 @@
         position: absolute;
         top: 188px;
         height: auto;
+        overflow-y: scroll;
+      overflow-x: hidden;
+      height: calc(100vh - 10vh - 130px);
       }
 
       &::-webkit-scrollbar {

@@ -32,14 +32,14 @@ const SignUp = ({
           <div className="signUp-header-close" onClick={() => setModalActive("")}>
             <CloseBtn />
           </div>
-          <div className="signUp-header-coin">
+          {/* <div className="signUp-header-coin">
             <FormCoin />
           </div>
           <div className="signUp-header-btn">
             <div className="signUp-header-btn-image">
               <DiamondImage />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="signUp-form-wrapper">
         <div className="signUp-form">
@@ -87,10 +87,12 @@ const SignUp = ({
               <span>BONUS ACTIVATED</span>
             </div>
             <div className="signUp-form-btns-secondary btn">Sign in</div>
-            <div className="signUp-form-btns-primary btn">Sign up</div>
+            <div className="signUp-form-btns-primary btn">
+              <div className="signUp-form-btns-primary-blur"></div>
+              Sign up</div>
           </div>
           <div className="signUp-form-tools">
-            <div className="signUp-form-tools-title">Log In directly</div>
+            <div className="signUp-form-tools-title">Sign In directly</div>
             <div className="signUp-form-tools-wrapper">
               <div className="signUp-form-tools-wrapper-item">
                 <Google />
