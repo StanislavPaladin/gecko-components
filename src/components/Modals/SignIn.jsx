@@ -2,9 +2,8 @@ import React, { useContext } from "react";
 import { ModalsContext } from "../../context";
 import InputComponent from "../UI/InputComponent";
 
-import { ReactComponent as DiamondImage } from "../../assets/icons/diamond2.svg";
 import { ReactComponent as CloseBtn } from "../../assets/icons/close-btn.svg";
-import { ReactComponent as FormCoin } from "../../assets/form-coin.svg";
+import { ReactComponent as Reptile } from "../../assets/reptile-signIn.svg";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Telegram } from "../../assets/icons/telegram.svg";
@@ -30,6 +29,9 @@ const SignIn = ({
         <div className="signIn-header">
           <div className="signIn-header-close" onClick={() => setModalActive("")}>
             <CloseBtn />
+          </div>
+          <div className="signIn-header-image">
+            <Reptile/>
           </div>
           {/* <div className="signIn-header-coin">
             <FormCoin />

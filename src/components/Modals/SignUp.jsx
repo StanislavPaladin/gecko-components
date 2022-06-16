@@ -2,8 +2,7 @@ import React, { useContext } from "react";
 import { ModalsContext } from "../../context";
 import InputComponent from "../UI/InputComponent";
 
-import { ReactComponent as DiamondImage } from "../../assets/icons/diamond2.svg";
-import { ReactComponent as FormCoin } from "../../assets/form-coin.svg";
+import { ReactComponent as Reptile } from "../../assets/reptile-signUp.svg";
 import { ReactComponent as Google } from "../../assets/icons/google.svg";
 import { ReactComponent as Facebook } from "../../assets/icons/facebook.svg";
 import { ReactComponent as Telegram } from "../../assets/icons/telegram.svg";
@@ -31,6 +30,9 @@ const SignUp = ({
         <div className="signUp-header">
           <div className="signUp-header-close" onClick={() => setModalActive("")}>
             <CloseBtn />
+          </div>
+          <div className="signUp-header-image">
+            <Reptile/>
           </div>
           {/* <div className="signUp-header-coin">
             <FormCoin />

@@ -34,7 +34,18 @@
       height: 340px;
       position: absolute;
       top: -40px;
-      background: url("../../assets/signInHeaderImage.svg") top no-repeat;
+      background: url("../../assets/modal-stars-background.svg") top no-repeat;
+      background-size: 95%;
+    }
+
+    &-image {
+      display: none;
+      @media screen and (max-width: 646px) {
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
     }
 
     &-close {
