@@ -5,7 +5,7 @@
   z-index: 500;
   position: absolute;
   height: 100%;
-  padding-top: 5%;
+  // padding-top: 5%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -18,7 +18,7 @@
 
   &-body {
     width: 768px;
-    max-height: 85vh;
+    height: 700px;
     overflow: auto;
     background: #232442;
     border-radius: 0px 16px 16px 16px;
@@ -57,9 +57,9 @@
 
     &-content {
       overflow: auto;
-      max-height: 100%;
+      height: 75%;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
-
+      overflow: hidden;
       .search {
         width: 249px;
         margin: 15px 0 15px 38px;
